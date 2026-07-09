@@ -14,6 +14,19 @@ de Pokémon y su detalle, construida con SwiftUI y arquitectura MVVM.
 3. Cmd+R para correr.
 4. Cmd+U para correr los tests.
 
+## Librerías utilizadas
+Ninguna librería de terceros. El proyecto usa exclusivamente frameworks
+nativos de Apple:
+- **SwiftUI** — interfaz de usuario
+- **Foundation** (`URLSession`, `Codable`, `FileManager`) — networking,
+  serialización y persistencia local
+- **XCTest** — pruebas unitarias
+
+Se optó por no introducir dependencias externas (ej. Alamofire, Kingfisher
+para imágenes) dado que `URLSession` + `async/await` y `AsyncImage` cubren
+las necesidades del proyecto sin overhead adicional — más apropiado para
+el alcance de esta prueba técnica.
+
 ## Arquitectura
 
 MVVM con inyección de dependencias por constructor:
